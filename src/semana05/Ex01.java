@@ -7,7 +7,7 @@ public class Ex01 {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Digite o comprimento do aquário");
-        double comprimeto = sc.nextDouble();
+        double comprimento = sc.nextDouble();
 
         System.out.println("Digite o altura do aquário");
         double altura = sc.nextDouble();
@@ -15,7 +15,7 @@ public class Ex01 {
         System.out.println("Digite o largura do aquário");
         double largura = sc.nextDouble();
 
-        double volume = (comprimeto * altura * largura)/1000;
+        double volume = (comprimento * altura * largura)/1000;
 
         System.out.println("___________________________________\n");
         System.out.println("O volume do aquário é " + volume);
