@@ -16,4 +16,26 @@ public class PessoaTest {
 
         assertEquals(23.4, calculaImc);
     }
+    
+    @Test 
+    public void exibeFaixa() {
+        Pessoa pessoa = new Pessoa();
+        pessoa.altura = 160;
+        pessoa.peso = 60;
+
+        String exibeFaixa = pessoa.getFaixa();
+
+        assertEquals("PESO NORMAL", exibeFaixa);
+    }
+
+    @Test 
+    public void exibeSituacao() {
+        Pessoa pessoa = new Pessoa();
+        pessoa.altura = 160;
+        pessoa.peso = 60;
+
+        String exibeSituacao = pessoa.getSituacao();
+
+        assertEquals("NORMAL", exibeSituacao);
+    }
 }
