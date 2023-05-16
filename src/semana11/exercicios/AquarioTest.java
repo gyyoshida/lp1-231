@@ -1,4 +1,4 @@
-package semana11;
+package semana11.exercicios;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -24,10 +24,8 @@ public class AquarioTest {
         aquario.comprimento = 100.0;
         aquario.largura = 50.0;
         aquario.altura = 40.0;
-        aquario.temperaturaDesejada = 24;
-        aquario.temperaturaAmbiente = 22.0;
 
-        double calculaPotencia = aquario.calcularPotenciaDoTermostato();
+        double calculaPotencia = aquario.calcularPotenciaDoTermostato(24, 22);
 
         assertEquals(20, calculaPotencia);
     }
@@ -38,12 +36,10 @@ public class AquarioTest {
         aquario.comprimento = 100.0;
         aquario.largura = 50.0;
         aquario.altura = 40.0;
-        aquario.temperaturaDesejada = 23;
-        aquario.temperaturaAmbiente = 26.0;
 
-        double calculaPotencia = aquario.calcularPotenciaDoTermostato();
+        double calculaPotencia = aquario.calcularPotenciaDoTermostato(24, 26);
 
-        assertEquals(-30, calculaPotencia);
+        assertEquals(-20, calculaPotencia);
     }
 
     @Test

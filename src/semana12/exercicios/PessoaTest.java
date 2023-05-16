@@ -1,4 +1,4 @@
-package semana11;
+package semana12.exercicios;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -8,9 +8,7 @@ public class PessoaTest {
     
     @Test
     public void calculaImc() {
-        Pessoa pessoa = new Pessoa();
-        pessoa.altura = 1.60;
-        pessoa.peso = 60;
+        Pessoa pessoa = new Pessoa(1.60, 60);
 
         double calculaImc = pessoa.calcularImc();
 
@@ -19,9 +17,7 @@ public class PessoaTest {
     
     @Test 
     public void exibeFaixa() {
-        Pessoa pessoa = new Pessoa();
-        pessoa.altura = 1.60;
-        pessoa.peso = 60;
+        Pessoa pessoa = new Pessoa(1.60, 60);
 
         String exibeFaixa = pessoa.getFaixa();
 
@@ -30,9 +26,7 @@ public class PessoaTest {
 
     @Test 
     public void exibeSituacao() {
-        Pessoa pessoa = new Pessoa();
-        pessoa.altura = 1.60;
-        pessoa.peso = 60;
+        Pessoa pessoa = new Pessoa(1.60, 60);
 
         String exibeSituacao = pessoa.getSituacao();
 

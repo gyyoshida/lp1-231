@@ -1,4 +1,4 @@
-package semana11;
+package semana11.exercicios;
 
 public class PessoaPrograma {
     public static void main(String[] args) {

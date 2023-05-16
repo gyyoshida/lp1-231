@@ -3,8 +3,7 @@ package semana12;
 public class Quadrado {
     public double lado;
 
-    //método construtor (mais indicado)
-    public Quadrado(double lado ) {
+    public Quadrado(double lado) {
         this.lado = lado;
     }
 
