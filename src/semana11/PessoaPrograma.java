@@ -5,7 +5,7 @@ public class PessoaPrograma {
     p1.altura = 172;
     p1.peso = 70.3;
 
-    double imc = p1.calcularImc();
-    String faixa = p1.getFaixa();
-    String situacao = p1.getSituacao();
+    System.out.println(p1.calcularImc());
+    System.out.println(p1.getFaixa());
+    System.out.println(p1.getSituacao());
 }
