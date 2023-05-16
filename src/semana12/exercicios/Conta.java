@@ -5,34 +5,32 @@ public class Conta {
     public double saldo;
     public String correntista;
 
-    public Conta(int codigo, double saldo, String correntista) {
+    public Conta(int codigo, String correntista) {
         this.codigo = codigo;
         this.saldo = 0.0;
         this.correntista = correntista;
     }
 
     public double sacar(double valorSacado) {
-        return saldo -= valorSacado;
+        return this.saldo -= valorSacado;
     }
 
     public double depositar(double valorDepositado) {
-        return saldo += valorDepositado;
+        return this.saldo += valorDepositado;
     }
 
     public double transferirValores(Conta conta2, double valorTransferido) {
-        if (saldo >= valorTransferido) {
-            saldo -= valorTransferido;
+        if (this.saldo >= valorTransferido) {
+            this.saldo -= valorTransferido;
             conta2.depositar(valorTransferido);
 
             return saldo;
+        } else  {
+                
+                this.saldo += valorTransferido;
+                conta2.sacar(valorTransferido);
 
-        } else {
-            saldo += valorTransferido;
-            conta2.sacar(valorTransferido);
-            
-            return saldo;
-            }
+                return saldo;
+                }
     }
-
-
 }

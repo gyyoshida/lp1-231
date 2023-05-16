@@ -8,29 +8,41 @@ public class ContaTest {
     
     @Test
     public void saca() {
-        Conta conta = new Conta(1, 22000, "Cristiane");
+        Conta conta = new Conta(1, "Cristiane");
 
         double saca = conta.sacar(22);
 
-        assertEquals(21978, saca);
+        assertEquals(-22, saca);
     }
 
     @Test
     public void deposita() {
-        Conta conta = new Conta(1, 22000, "Cristiane");
+        Conta conta = new Conta(1, "Cristiane");
 
         double deposita = conta.depositar(22);
 
-        assertEquals(22022, deposita);
+        assertEquals(22, deposita);
     }
 
     @Test 
-    public void tranfereValor() {
-        Conta conta = new Conta(1, 22000, "Cristiane");
-        Conta conta2 = new Conta (2, 23000, "Yoshida");
+    public void tranfereValorParaEssaConta() {
+        Conta conta1 = new Conta(1,"Cristiane");
+        Conta conta2 = new Conta (2,"Yoshida");
 
-        double transfere = conta.transferirValores(conta2, -20);
+        conta1.saldo = 20;
+        double transfere = conta1.transferirValores(conta2, 80);
 
-        assertEquals(23020, transfere);
+        assertEquals(100, transfere);
+    }
+
+    @Test 
+    public void tranfereValorParaOutraConta() {
+        Conta conta1 = new Conta(1,"Cristiane");
+        Conta conta2 = new Conta (2,"Yoshida");
+
+        conta1.saldo = 80;
+        double transfere = conta1.transferirValores(conta2, 20);
+
+        assertEquals(60, transfere);
     }
 }
