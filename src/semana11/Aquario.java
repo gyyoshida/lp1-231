@@ -4,7 +4,6 @@ public class Aquario {
     public double comprimento;
     public double largura;
     public double altura;
-    public double volume;
     public double temperaturaDesejada;
     public double temperaturaAmbiente;
 
@@ -13,10 +12,10 @@ public class Aquario {
     }
 
     public double calcularPotenciaDoTermostato() {
-        return volume * 0.05 * (temperaturaDesejada - temperaturaAmbiente);
+        return calcularVolume() * 0.05 * (temperaturaDesejada - temperaturaAmbiente);
     }
 
     public double calcularQuantidadeLitrosFiltro() {
-        return volume * 3;
+        return calcularVolume() * 3;
     }
 }

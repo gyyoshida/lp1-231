@@ -21,9 +21,11 @@ public class AquarioTest {
     @Test
     public void calculaPotenciaDoTermostatoParaAquecer() {
         Aquario aquario = new Aquario();
+        aquario.comprimento = 100.0;
+        aquario.largura = 50.0;
+        aquario.altura = 40.0;
         aquario.temperaturaDesejada = 24;
         aquario.temperaturaAmbiente = 22.0;
-        aquario.volume = 200;
 
         double calculaPotencia = aquario.calcularPotenciaDoTermostato();
 
@@ -33,9 +35,11 @@ public class AquarioTest {
     @Test
     public void calculaPotenciaDoTermostatoParaEsfriar() {
         Aquario aquario = new Aquario();
+        aquario.comprimento = 100.0;
+        aquario.largura = 50.0;
+        aquario.altura = 40.0;
         aquario.temperaturaDesejada = 23;
         aquario.temperaturaAmbiente = 26.0;
-        aquario.volume = 200;
 
         double calculaPotencia = aquario.calcularPotenciaDoTermostato();
 
@@ -45,7 +49,9 @@ public class AquarioTest {
     @Test
     public void calculaQuantidadeLitrosFiltro() {
         Aquario aquario = new Aquario();
-        aquario.volume = 200;
+        aquario.comprimento = 100.0;
+        aquario.largura = 50.0;
+        aquario.altura = 40.0;
 
         double calculaFiltragem = aquario.calcularQuantidadeLitrosFiltro();
 

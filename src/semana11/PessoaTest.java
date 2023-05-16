@@ -9,18 +9,18 @@ public class PessoaTest {
     @Test
     public void calculaImc() {
         Pessoa pessoa = new Pessoa();
-        pessoa.altura = 160;
+        pessoa.altura = 1.60;
         pessoa.peso = 60;
 
         double calculaImc = pessoa.calcularImc();
 
-        assertEquals(23.4, calculaImc);
+        assertEquals(23.437499999999996, calculaImc);
     }
     
     @Test 
     public void exibeFaixa() {
         Pessoa pessoa = new Pessoa();
-        pessoa.altura = 160;
+        pessoa.altura = 1.60;
         pessoa.peso = 60;
 
         String exibeFaixa = pessoa.getFaixa();
@@ -31,7 +31,7 @@ public class PessoaTest {
     @Test 
     public void exibeSituacao() {
         Pessoa pessoa = new Pessoa();
-        pessoa.altura = 160;
+        pessoa.altura = 1.60;
         pessoa.peso = 60;
 
         String exibeSituacao = pessoa.getSituacao();
