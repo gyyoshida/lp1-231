@@ -19,8 +19,12 @@ public class Conta {
         return this.saldo += valorDepositado;
     }
 
-    public double transferirValores(Conta conta2, double valorTransferido) {
-        return this.saldo -= valorTransferido;
-        
+    public boolean transferirValores(Conta conta2, double valorTransferido) {
+        if (saldo >= valorTransferido) {
+            this.saldo -= valorTransferido;
+            conta2.depositar(valorTransferido);
+            return true;
+        } else {
+            return false;  
     }
 }
