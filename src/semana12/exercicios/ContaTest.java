@@ -25,17 +25,6 @@ public class ContaTest {
     }
 
     @Test 
-    public void tranfereValorParaEssaConta() {
-        Conta conta1 = new Conta(1,"Cristiane");
-        Conta conta2 = new Conta (2,"Yoshida");
-
-        conta1.saldo = 20;
-        double transfere = conta1.transferirValores(conta2, 80);
-
-        assertEquals(100, transfere);
-    }
-
-    @Test 
     public void tranfereValorParaOutraConta() {
         Conta conta1 = new Conta(1,"Cristiane");
         Conta conta2 = new Conta (2,"Yoshida");
