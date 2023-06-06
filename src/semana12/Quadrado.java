@@ -3,6 +3,7 @@ package semana12;
 public class Quadrado {
     public double lado;
 
+    //Construtor
     public Quadrado(double lado) {
         this.lado = lado;
     }
