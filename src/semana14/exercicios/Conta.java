@@ -34,7 +34,11 @@ public class Conta {
     }
 
     public void setSaldo(double saldo) {
+        if (saldo < 0) {
+            throw new RuntimeException("Saldo inválido");
+        }
 
+        this.saldo = saldo;
     }
 
     public int getCodigo() {
