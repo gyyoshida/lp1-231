@@ -3,11 +3,11 @@ package semana17;
 import java.time.LocalDate;
 
 public class Conta {
-    protected int numero;
-    protected LocalDate dataAbertura;
+    private int numero;
+    private LocalDate dataAbertura;
     protected double saldo;
     protected double tarifa;
-    protected Correntista correntista;
+    private Correntista correntista;
 
     public Conta(int numero, LocalDate dataAbertura, double saldo, double tarifa, Correntista correntista) {
         this.numero = numero;
