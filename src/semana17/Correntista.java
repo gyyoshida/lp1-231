@@ -3,6 +3,11 @@ package semana17;
 public class Correntista {
     private int codigo;
     private String nome;
-    private Lidt<Conta> contas;
+    private List<Conta> contas;
     
+    public Correntista (int codigo, String nome, List<Conta> contas) {
+        this.codigo = codigo;
+        this.nome = nome;
+        this.contas = contas;
+    }
 }
