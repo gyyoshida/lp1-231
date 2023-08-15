@@ -14,5 +14,4 @@ public class Vendedor {
     public double obterSalario() {
         return vendas * (comissao/100);
     }
-
 }

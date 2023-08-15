@@ -1,5 +1,7 @@
 package semana17;
 
+import java.time.LocalDate;
+
 public class ContaSalario extends Conta {
     private Empresa empresa;
 

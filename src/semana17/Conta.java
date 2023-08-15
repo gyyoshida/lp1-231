@@ -1,6 +1,6 @@
 package semana17;
 
-import java.sql.Date;
+import java.time.LocalDate;
 
 public class Conta {
     protected int numero;
@@ -18,7 +18,7 @@ public class Conta {
     }
 
     public void sacar(double valor) {
-        if (valor)
+        if (valor <= saldo)
         saldo -= valor;
     }
 
